@@ -1,0 +1,129 @@
+@import url(reset.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #222;
+  font-family: "GenesisSans Text KR OTF";
+}
+
+#company_first {
+  height: 105vh;
+  position: relative;
+  overflow: hidden;
+}
+
+#company_first img {
+  width: 100%;
+  height: 98vh;
+  /* 이미지가 화면에 꽉 차도록 설정 */
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.first_sub {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  /* 이미지와 내용이 화면에 꽉 차도록 설정 */
+}
+
+.first_context {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%) translateX(50px);
+  width: 700px;
+  color: #eee;
+  opacity: 0;
+  transition: opacity 5s ease, transform 5s;
+}
+
+.first_context.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(0);
+}
+
+/* 여기까지 첫번째 페이지 */
+
+#company_second {
+  height: 110vh;
+  position: relative;
+  overflow: hidden;
+}
+
+#company_second img {
+  width: 100%;
+  height: 98vh;
+  /* 이미지가 화면에 꽉 차도록 설정 */
+  object-fit: cover;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  /* 부드러운 전환을 위한 트랜지션 */
+}
+
+.second_context {
+  position: absolute;
+  top: 30%;
+  /* 조정 가능 */
+  left: 50%;
+  transform: translateY(50px);
+  width: 700px;
+  color: #eee;
+  opacity: 0;
+  /* 초기 위치 설정 */
+  transition: opacity 3s ease, transform 3s ease;
+  /* 트랜지션 추가 */
+}
+
+/* 세번째 동영상 페이지 */
+#company_third video {
+  height: 98vh;
+  width: 100%;
+}
+
+#company_forth {
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  /* position: absolute; */
+}
+
+#company_forth img {
+  width: 50%;
+  height: 600px;
+  position: relative;
+  top: 25%;
+  left: 10%;
+}
+
+.forth_context {
+  width: 400px;
+  position: relative;
+  top: -5%;
+  left: 70%;
+  color: #eee;
+}
+
+#forth_btn {
+  display: block;
+  padding: 10px 20px;
+  background: #222;
+  border: 1px solid #eee;
+}
+
+#forth_btn a {
+  color: #eee;
+}

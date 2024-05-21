@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/main.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+     <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>회원가입</title>
+  </head>
+  <body>
+    <header>
+      <div class="icon_left">
+          <input type="checkbox" name="menu_icon" id="menu_icon" />
+          <label for="menu_icon">
+              <span
+                  id="menuIconOpen"
+                  class="material-symbols-outlined"
+                  style="font-size: 35px; font-weight: 600"
+                  >menu</span
+              >
+              <span
+                  id="menuIconClose"
+                  class="material-symbols-outlined"
+                  style="font-size: 35px; font-weight: 600; display: none"
+                  >&times;</span
+              >
+          </label>
+      </div>
+
+      <div class="logo">
+          <a href="main.html" target="_blank">
+              <img src="../logo.png" alt="AudiLogo" width="100"  />
+          </a>
+      </div>
+
+      <div class="icon_right">
+          <div class="searchicon">
+              <span class="material-symbols-outlined" style="font-size:32px; font-weight:600">search</span>
+              <input type="text" name="" id="" placeholder="Search">
+          </div>
+
+          <div class="lock">
+              <div class="lockicon">
+                  <span class="material-symbols-outlined" style="font-size:32px; font-weight:600;" >lock</span>
+              </div>
+              <div class="login">
+                  <input type="text" name="id" id="id" placeholder="아이디">
+                  <input type="password" name="pw" id="pw" placeholder="비밀번호">
+              </div>
+              <div class="loginbtn">
+                  <button><a href="login_form.html" target="_blank">sign up</a></button>
+                  <button><a href="login_form.html" target="_blank">log in</a></button>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <nav id="menu">
+      <ul class="icon_box">
+          <li>
+              <a href="#"
+                  ><span class="material-symbols-outlined" style="font-size: 30px; font-weight: 600"
+                      >person</span
+                  ></a
+              >
+          </li>
+          <li>
+              <a href="#"
+                  ><span class="material-symbols-outlined" style="font-size: 30px; font-weight: 600"
+                      >event</span
+                  ></a
+              >
+          </li>
+          <li>
+              <a href="#"
+                  ><span class="material-symbols-outlined" style="font-size: 30px; font-weight: 600"
+                      >favorite</span
+                  ></a
+              >
+          </li>
+          <li>
+              <a href="#"
+                  ><span class="material-symbols-outlined" style="font-size: 30px; font-weight: 600"
+                      >shopping_cart</span
+                  ></a
+              >
+          </li>
+      </ul>
+      <ul class="menu_box">
+          <li class="nav__item">
+              <a href="company.html" class="nav__item" target="_blank">About</a>
+              <ul class="sub-menu">
+                  <li><a href="company.html">COMPANY</a></li>
+              </ul>
+          </li>
+          <li class="nav__item">
+              <a href="#" class="nav__link">Models</a>
+              <ul class="sub-menu">
+                  <li><a href="models_0401.html" target="_blank">LINE-UP</a></li>
+                  <li><a href="models_sedan.html" target="_blank">SEDAN</a></li>
+                  <li><a href="#">SUV</a></li>
+                  <li><a href="#">SPORTBACK</a></li>
+                  <li><a href="#">E-TRON</a></li>
+              </ul>
+          </li>
+          <li class="nav__item">
+              <a href="center.html" class="nav__link" target="_blank">Center</a>
+              <ul class="sub-menu">
+                  <li><a href="center.html" target="_blank">CENTERS</a></li>
+              </ul>
+          </li class="nav__item">
+          <li>
+              <a href="#" class="nav__link">Experience</a>
+              <ul class="sub-menu">
+                  <li><a href="experience.html" target="_blank">Experience</a></li>
+              </ul>
+          </li class="nav__item">
+          <li>
+              <a href="#" class="nav__link">Exclusive</a>
+              <ul class="sub-menu">
+                  <li><a href="exclusive.html" target="_blank">Exclusive</a></li>
+              </ul>
+          </li>
+      </ul>
+  </nav>
+    <div class="l-form">
+      <div class="shape1"></div>
+      <div class="shape2"></div>
+
+      <div class="form">
+        <img src="../image/form_img.jpg" alt="" class="form__img" />
+
+        <form action="" class="form__content">
+          <h1 class="form__title">회원가입</h1>
+
+          <div class="form__div form__div-one">
+            <div class="form__icon">
+              <i class="bx bx-user-circle"></i>
+            </div>
+
+            <div class="form__div-input">
+              <label for="" class="form__label">아이디</label>
+              <input type="text" class="form__input" autofocus />
+            </div>
+          </div>
+
+          <div class="form__div">
+            <div class="form__icon">
+              <i class="bx bx-lock"></i>
+            </div>
+
+            <div class="form__div-input">
+              <label for="" class="form__label">비밀번호</label>
+              <input type="password" class="form__input" />
+            </div>
+          </div>
+          <a href="#" class="form__forgot">비밀번호를 잊으셨나요?</a>
+
+          <input
+            type="submit"
+            class="form__button"
+            value="로그인"
+            style="color: #fff; background-color: #000"
+          />
+
+          <div class="form__social">
+            <span class="form__social-text">다음 계정으로 가입하기</span>
+
+            <a
+              href="https://www.facebook.com/?locale=ko_KR"
+              class="form__social-icon"
+              style="background-color: dodgerblue"
+              target="_blank"
+              ><i class="bx bxl-facebook"></i
+            ></a>
+            <a
+              href="https://accounts.google.com/"
+              class="form__social-icon"
+              style="background-color: palevioletred"
+              target="_blank"
+              ><i class="bx bxl-google"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/"
+              class="form__social-icon"
+              style="
+                background: radial-gradient(
+                    circle farthest-corner at 32% 106%,
+                    #ffe17d 0%,
+                    #ffcd69 10%,
+                    #fa9137 28%,
+                    #eb4141 42%,
+                    transparent 82%
+                  ),
+                  linear-gradient(135deg, #234bd7 12%, #c33cbe 58%);
+              "
+              target="_blank"
+              ><i class="bx bxl-instagram"></i
+            ></a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="../js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audi Chat_bot</title>
+    <style>
+        /* 전체 요소 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body 스타일 */
+        body {
+            padding-top: 100px;
+        }
+
+        /* 헤더 스타일 */
+        .chat_wrap .header {
+            font-size: 14px;
+            height: 100px;
+            line-height: 120px;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        /* 채팅 메시지 출력 영역 스타일 */
+        .chat_wrap .chat {
+            padding-bottom: 80px;
+            max-height: 80vh;
+            overflow-y: scroll;
+        }
+
+        .chat_wrap .chat ul {
+            width: 100%;
+            list-style: none;
+        }
+
+        .chat_wrap .chat ul li {
+            width: 100%;
+        }
+
+        .chat_wrap .chat ul li.left {
+            text-align: left;
+        }
+
+        .chat_wrap .chat ul li.right {
+            text-align: right;
+        }
+
+        .chat_wrap .chat ul li>div {
+            font-size: 13px;
+        }
+
+        .chat_wrap .chat ul li>div.sender {
+            margin: 10px 20px 0 20px;
+            font-weight: bold;
+        }
+
+        .chat_wrap .chat ul li>div.message {
+            display: inline-block;
+            word-break: break-all;
+            margin: 5px 20px;
+            max-width: 100%;
+            border: 1px solid #888;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fcfcfc;
+            color: #555;
+            text-align: left;
+        }
+
+        .chat_wrap .chat ul li.right>div.message {
+            background-color: #dcf8c6;
+
+        }
+
+        .chat_wrap .chat ul li.left>div.message {
+            background-color: #e3e3e3;
+
+        }
+
+        /* 입력창 스타일 */
+        .chat_wrap .input-div {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #fff;
+            text-align: center;
+            border-top: 1px solid #f18c7e;
+        }
+
+        .chat_wrap .input-div>textarea {
+            width: calc(100% - 20px);
+            height: 80px;
+            border: none;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* 숨겨진 채팅 포맷 템플릿 */
+        .format {
+            display: none;
+        }
+
+        /* 반응형 디자인 수정 */
+        @media screen and (max-width: 500px) {
+            .chat_wrap .chat ul li>div.message {
+                max-width: 90%;
+            }
+        }
+
+        @media screen and (max-width: 300px) {
+            .chat_wrap .chat ul li>div.message {
+                max-width: 100%;
+            }
+        }
+
+        /* 봇 프로필 이미지 스타일 */
+        .bot-profile-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        /* 봇 메시지 컨테이너 스타일 */
+        .bot-message-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-left: 10%;
+        }
+    </style>
+
+    </style>
+</head>
+
+<body>
+    <div class="chat_wrap">
+        <!-- 헤더 -->
+        <div class="header"><img src="../image/Crop_Audi_logo.png" alt="" width="100px" /></div>
+        <!-- 채팅 메시지 출력 영역 -->
+        <div class="chat">
+            <ul></ul>
+        </div>
+        <!-- 사용자 입력 영역 -->
+        <div class="input-div">
+            <textarea placeholder="입력하세요"></textarea>
+        </div>
+        <!-- 채팅 형식 템플릿 (숨김) -->
+        <div class="chat format">
+            <ul>
+                <li>
+                    <div class="sender">
+                        <span></span>
+                    </div>
+                    <div class="message">
+                        <span></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- jQuery 라이브러리 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- JavaScript 코드 -->
+    <script>
+        // 채팅 기능 정의
+        let Chat = function () {
+            const myName = '사용자';
+            const agentName = '아우디 챗봇';
+
+            function init() {
+                $(document).on('keydown', 'div.input-div textarea', function (e) {
+                    if (e.keyCode == 13 && !e.shiftKey) {
+                        e.preventDefault();
+                        const message = $(this).val();
+                        sendMessage(myName, message);
+                        clearTextarea();
+                        generateAgentResponse();
+                        scrollToBottom();
+                    }
+                });
+
+                sendMessage(agentName, '반갑습니다. 저는 아우디 고객센터 챗봇입니다.');
+            }
+
+            function createMessageTag(senderName, message) {
+                const chatLi = $('div.chat.format ul li').clone();
+                chatLi.find('.sender span').text(senderName);
+                chatLi.find('.message span').text(message);
+                return chatLi;
+            }
+
+            function appendMessageTag(senderName, message) {
+                const LR_className = senderName === myName ? 'right' : 'left';
+                const chatLi = createMessageTag(senderName, message);
+                chatLi.addClass(LR_className);
+                if (senderName === agentName) {
+                    const botProfileImg = document.createElement("img");
+                    botProfileImg.src = "../image/audi profile.jpg"; // 챗봇 프로필 이미지 URL
+                    botProfileImg.alt = "Audi Profile";
+                    botProfileImg.classList.add("bot-profile-img");
+                    const messageDiv = chatLi.find('.message');
+                    messageDiv.prepend(botProfileImg); // 챗봇 프로필 이미지를 메시지 앞에 추가
+                }
+                $('div.chat:not(.format) ul').append(chatLi);
+                scrollToBottom();
+            }
+
+            // 초기화 함수
+            function clearTextarea() {
+                $('div.input-div textarea').val('');
+            }
+
+            function sendMessage(senderName, message) {
+                appendMessageTag(senderName, message);
+            }
+
+            function generateAgentResponse() {
+                const responses = [
+                    '반가워요. 저는 아우디 고객센터 챗봇입니다.',
+                    '고객님 어떤 도움이 필요하세요?',
+                    '네, 문제를 해결하기 위해 최선을 다하겠습니다.',
+                    '잠시만 기다려주세요, 확인 후 도와드리겠습니다.',
+                    '말씀하신 내용을 이해하지 못했습니다. ,상담사와 대화하거나 도움말을 참고해 보세요',
+                    '죄송합니다. 제가 답변드리기 어려운 내용입니다. ,상담사와 대화하거나 도움말을 참고해 보세요.',
+                    '상담원을 연결하는중 입니다. 잠시만잠시만 기다려주세요.',
+                ];
+                const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                appendMessageTag(agentName, randomResponse);
+            }
+
+            // 채팅창 맨 아래로 스크롤
+            function scrollToBottom() {
+                $('div.chat').scrollTop($('div.chat').prop('scrollHeight'));
+            }
+
+            return {
+                init: init,
+            };
+
+
+        };
+
+        // 문서 로드 후 채팅 초기화
+        $(function () {
+            let chat = Chat();
+            chat.init();
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

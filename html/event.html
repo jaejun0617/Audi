@@ -1,0 +1,568 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+        <title>Audi EVENT PAGE</title>
+                <!-- 제이쿼리  -->
+                <script src="../jquery-3.7.1.min.js"></script>
+                <!-- 메인 css  -->
+                <link rel="stylesheet" href="../css/event.css" />
+                <!-- 로그인 css -->
+                <link rel="stylesheet" href="../css/login.css">
+                <!-- aos css -->
+                <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+                <!-- 아이콘 js  -->
+                <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+                <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+                <!-- 구글 아이콘 css -->
+                <link
+                    rel="stylesheet"
+                    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+                <link rel="stylesheet" href="./style/swiper-bundle.min.css" />
+    </head>
+
+    <body>
+        <header>
+            <div class="icon_left">
+                <input type="checkbox" name="menu_icon" id="menu_icon" />
+                <label for="menu_icon">
+                    <span
+                        id="menuIconOpen"
+                        class="material-symbols-outlined"
+                        style="font-size: 35px; font-weight: 600; color: #fff;"
+                        >menu</span
+                    >
+                    <span
+                        id="menuIconClose"
+                        class="material-symbols-outlined"
+                        style="font-size: 35px; font-weight: 600; display: none; color: #fff;"
+                        >&times;</span
+                    >
+                </label>
+            </div>
+
+            <div class="logo">
+                <a href="main.html">
+                    <img src="../image/logo.png" alt="AudiLogo" style="width: 100px;" />
+                </a>
+            </div>
+
+            <div class="icon_right">
+                <div class="searchicon">
+                    <span class="material-symbols-outlined" style="font-size:32px; font-weight:600; color: #fff;">search</span>
+                    <input type="text" name="" id="" placeholder="Search">
+                </div>
+
+                <div class="lock">
+                    <div class="lockicon">
+                        <span class="material-symbols-outlined" style="font-size:32px; font-weight:600; color: #fff;" >lock</span>
+                    </div>
+                    <div class="login">
+                        <input type="text" name="id" id="id" placeholder="아이디">
+                        <input type="password" name="pw" id="pw" placeholder="비밀번호">
+                    </div>
+                    <div class="loginbtn">
+                        <button><a href="login_form.html" target="_blank">sign up</a></button>
+                        <button><a href="login_form.html" target="_blank">log in</a></button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav id="menu">
+            <ul class="icon_box">
+                <li>
+                    <a href="#"
+                        ><span class="material-symbols-outlined" style="font-size: 30px; font-weight: 600; color: #fff;"
+                            >person</span
+                        ></a
+                    >
+                </li>
+                <li>
+                    <a href="#"
+                        ><span class="material-symbols-outlined" style="font-size: 30px; font-weight: 600; color: #fff;"
+                            >event</span
+                        ></a
+                    >
+                </li>
+                <li>
+                    <a href="#"
+                        ><span class="material-symbols-outlined" style="font-size: 30px; font-weight: 600; color: #fff;"
+                            >favorite</span
+                        ></a
+                    >
+                </li>
+                <li>
+                    <a href="#"
+                        ><span class="material-symbols-outlined" style="font-size: 30px; font-weight: 600; color: #fff;"
+                            >shopping_cart</span
+                        ></a
+                    >
+                </li>
+            </ul>
+            <ul class="menu_box">
+                <li class="nav__item">
+                    <a href="company.html" class="nav__item" target="_blank">About</a>
+                    <ul class="sub-menu">
+                        <li><a href="company.html">COMPANY</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Models</a>
+                    <ul class="sub-menu">
+                        <li><a href="models_0401.html" target="_blank">LINE-UP</a></li>
+                        <li><a href="models_sedan.html" target="_blank">SEDAN</a></li>
+                        <li><a href="#">SUV</a></li>
+                        <li><a href="#">SPORTBACK</a></li>
+                        <li><a href="#">E-TRON</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a href="center.html" class="nav__link" target="_blank">Center</a>
+                    <ul class="sub-menu">
+                        <li><a href="center.html" target="_blank">CENTERS</a></li>
+                    </ul>
+                </li class="nav__item">
+                <li>
+                    <a href="#" class="nav__link">Experience</a>
+                    <ul class="sub-menu">
+                        <li><a href="experience.html" target="_blank">Experience</a></li>
+                    </ul>
+                </li class="nav__item">
+                <li>
+                    <a href="#" class="nav__link">Exclusive</a>
+                    <ul class="sub-menu">
+                        <li><a href="exclusive.html" target="_blank">Exclusive</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+        <section class="banner">
+            <div class="banner-img">
+                <img src="../image/banner/bg-news.jpg" alt="" style="height: 500px;">
+                <div class="banner-text">
+                    <h2>Event</h2>
+                    <p>아우디의 이벤트 소식을 가장 빠르게 접해보세요.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <main>
+            <section class="about section" id="about">
+                <div class="about-container container grid">
+                    <div class="about-group">
+                        <img src="../image/1.jpg" alt="" class="about-img" />
+                        <div class="about-card">
+                        </div>
+                    </div>
+                    <div class="about-data">
+                        <h2 class="section-title about-title">
+                            아우디 코리아 홈페이지 <br> 리뉴얼 오픈 
+                            
+                        </h2>
+                        <p class="about-description">
+                            아우디 코리아 공식사이트가 리뉴얼 오픈하였습니다. <br>
+                            앞으로 다양한 정보와 뉴스, 이벤트로 여러분과 소통하며 <br>
+                            아우디만의 프리미엄 라이프스타일을 공유하도록 하겠습니다.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="popular section" id="popular">
+                <h2  class="section-title">
+                    진행중 / 예정 이벤트 <br />
+                    종료 이벤트
+                </h2>
+                <div class="popular-container container swiper">
+                    <div class="swiper-wrapper">
+                        <article class="popular-card swiper-slide">
+                            <div class="shape shape-smaller"></div>
+                            <h1 class="popular-title">진행중</h1>
+                            <h3 class="popular-subtitle">EVENT</h3>
+                            <img src="../image/event-1.jpg" alt="" class="popular-img" />
+                            <h3 class="popular-price">2024 01 24 ~ 2024 12 25</h3>
+                            <button class="button popular-button"><i class="ri-shopping-bag-2-line"></i></button>
+                        </article>
+
+                        <article class="popular-card swiper-slide">
+                            <div class="shape shape-smaller"></div>
+                            <h1 class="popular-title">진행중</h1>
+                            <h3 class="popular-subtitle">EVENT</h3>
+                            <img src="../image/event-2.jpg" alt="" class="popular-img" />
+                            <h3 class="popular-price">2024 01 24 ~ 2024 12 25</h3>
+                            <button class="button popular-button"><i class="ri-shopping-bag-2-line"></i></button>
+                        </article>
+
+                        <article class="popular-card swiper-slide">
+                            <div class="shape shape-smaller"></div>
+                            <h1 class="popular-title">진행중</h1>
+                            <h3 class="popular-subtitle">EVENT</h3>
+                            <img src="../image/event-3.jpg" alt="" class="popular-img" />
+
+                            <h3 class="popular-price">2024 01 24 ~ 2024 12 25</h3>
+                            <button class="button popular-button"><i class="ri-shopping-bag-2-line"></i></button>
+                        </article>
+
+                        <article class="popular-card swiper-slide">
+                            <div class="shape shape-smaller"></div>
+                            <h1 class="popular-title">예정</h1>
+                            <h3 class="popular-subtitle">EVENT</h3>
+                            <img src="../image/event-4.jpg" alt="" class="popular-img" />
+
+                            <h3 class="popular-price">2024 01 24 ~ 2024 12 25</h3>
+                            <button class="button popular-button"><i class="ri-shopping-bag-2-line"></i></button>
+                        </article>
+
+                        <article class="popular-card swiper-slide">
+                            <div class="shape shape-smaller"></div>
+                            <h1 class="popular-title">예정</h1>
+                            <h3 class="popular-subtitle">EVENT</h3>
+                            <img src="../image/event-5.jpg" alt="" class="popular-img" />
+
+                            <h3 class="popular-price">2024 01 24 ~ 2024 12 25</h3>
+                            <button class="button popular-button"><i class="ri-shopping-bag-2-line"></i></button>
+                        </article>
+
+                        <article class="popular-card swiper-slide">
+                            <div class="shape shape-smaller"></div>
+                            <h1 class="popular-title">예정</h1>
+                            <h3 class="popular-subtitle">EVENT</h3>
+                            <img src="../image/event-6.jpg" alt="" class="popular-img" />
+
+                            <h3 class="popular-price">2024 01 24 ~ 2024 12 25</h3>
+                            <button class="button popular-button"><i class="ri-shopping-bag-2-line"></i></button>
+                        </article>
+
+                        <article class="popular-card swiper-slide">
+                            <div class="shape shape-smaller"></div>
+                            <h1 class="popular-title">예정</h1>
+                            <h3 class="popular-subtitle">EVENT</h3>
+                            <img src="../image/event-7.jpg" alt="" class="popular-img" />
+
+                            <h3 class="popular-price">2024 01 24 ~ 2024 12 25</h3>
+                            <button class="button popular-button"><i class="ri-shopping-bag-2-line"></i></button>
+                        </article>
+
+                        <article class="popular-card swiper-slide">
+                            <div class="shape shape-smaller"></div>
+                            <h1 class="popular-title">예정</h1>
+                            <h3 class="popular-subtitle">EVENT</h3>
+                            <img src="../image/event-8.jpg" alt="" class="popular-img" />
+
+                            <h3 class="popular-price">2024 01 24 ~ 2024 12 25</h3>
+                            <button class="button popular-button"><i class="ri-shopping-bag-2-line"></i></button>
+                        </article>
+
+                        <article class="popular-card swiper-slide">
+                            <div class="shape shape-smaller"></div>
+                            <h1 class="popular-title">예정</h1>
+                            <h3 class="popular-subtitle">EVENT</h3>
+                            <img src="../image/event-9.jpg" alt="" class="popular-img" />
+
+                            <h3 class="popular-price">2024 01 24 ~ 2024 12 25</h3>
+                            <button class="button popular-button"><i class="ri-shopping-bag-2-line"></i></button>
+                        </article>
+
+                        <article class="popular-card swiper-slide">
+                            <div class="shape shape-smaller"></div>
+                            <h1 class="popular-title">종료</h1>
+                            <h3 class="popular-subtitle">EVENT</h3>
+                            <img src="../image/event-10.jpg" alt="" class="popular-img" />
+
+                            <h3 class="popular-price">2024 01 24 ~ 2024 12 25</h3>
+                            <button class="button popular-button"><i class="ri-shopping-bag-2-line"></i></button>
+                        </article>
+
+                        <article class="popular-card swiper-slide">
+                            <div class="shape shape-smaller"></div>
+                            <h1 class="popular-title">종료</h1>
+                            <h3 class="popular-subtitle">EVENT</h3>
+                            <img src="../image/event-11.jpg" alt="" class="popular-img" />
+
+                            <h3 class="popular-price">2024 01 24 ~ 2024 12 25</h3>
+                            <button class="button popular-button"><i class="ri-shopping-bag-2-line"></i></button>
+                        </article>
+
+                        <article class="popular-card swiper-slide">
+                            <div class="shape shape-smaller"></div>
+                            <h1 class="popular-title">종료</h1>
+                            <h3 class="popular-subtitle">EVENT</h3>
+                            <img src="../image/event-12.jpg" alt="" class="popular-img" />
+
+                            <h3 class="popular-price">2024 01 24 ~ 2024 12 25</h3>
+                            <button class="button popular-button"><i class="ri-shopping-bag-2-line"></i></button>
+                        </article>
+
+                        <article class="popular-card swiper-slide">
+                            <div class="shape shape-smaller"></div>
+                            <h1 class="popular-title">종료</h1>
+                            <h3 class="popular-subtitle">EVENT</h3>
+                            <img src="../image/event-13.jpg" alt="" class="popular-img" />
+
+                            <h3 class="popular-price">2024 01 24 ~ 2024 12 25</h3>
+                            <button class="button popular-button"><i class="ri-shopping-bag-2-line"></i></button>
+                        </article>
+
+                        <article class="popular-card swiper-slide">
+                            <div class="shape shape-smaller"></div>
+                            <h1 class="popular-title">종료</h1>
+                            <h3 class="popular-subtitle">EVENT</h3>
+                            <img src="../image/event-14.jpg" alt="" class="popular-img" />
+
+                            <h3 class="popular-price">2024 01 24 ~ 2024 12 25</h3>
+                            <button class="button popular-button"><i class="ri-shopping-bag-2-line"></i></button>
+                        </article>
+
+                        <article class="popular-card swiper-slide">
+                            <div class="shape shape-smaller"></div>
+                            <h1 class="popular-title">종료</h1>
+                            <h3 class="popular-subtitle">EVENT</h3>
+                            <img src="../image/event-15.jpg" alt="" class="popular-img" />
+
+                            <h3 class="popular-price">2024 01 24 ~ 2024 12 25</h3>
+                            <button class="button popular-button"><i class="ri-shopping-bag-2-line"></i></button>
+                        </article>
+                    </div>
+                    <div class="swiper-pagination" style="color: #eee"></div>
+                </div>
+            </section>
+
+            <section class="featured section" id="featured">
+                <h2 class="section-title">시승 이벤트</h2>
+                <div class="featured-container container grid">
+                    <ul class="featured-filters">
+                        <li>
+                            <button
+                                class="featured-item active-featured"
+                                data-filter="all"
+                                style="width: 63px; height: 52px">
+                                <span>전체</span>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button class="featured-item" data-filter=".SEDAN" style="width: 63px; height: 52px">
+                                <span>진행</span>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button class="featured-item" data-filter=".audi" style="width: 63px; height: 52px">
+                                <span>예정</span>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button class="featured-item" data-filter=".R8" style="width: 63px; height: 52px">
+                                <span>완료</span>
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="featured-content grid">
+                        <article class="featured-card mix SEDAN">
+                            <div class="shape shape-smaller"></div>
+                            <h1 class="featred-title">Audi</h1>
+                            <h3 class="featured-subtitle">SEDAN</h3>
+                            <img src="../image/sedan.png" alt="" class="featured-img" style="height: 108px;" />
+                            <h3 class="featured-price">시승예약</h3>
+                            <button class="button featured-button"><i class="ri-shopping-bag-2-line"></i></button>
+                        </article>
+
+                        <article class="featured-card mix SEDAN">
+                            <div class="shape shape-smaller"></div>
+                            <h1 class="featred-title">Audi</h1>
+                            <h3 class="featured-subtitle">SUV</h3>
+                            <img src="../image/suv.png" alt="" class="featured-img"style="height: 108px;"  />
+                            <h3 class="featured-price">시승예약</h3>
+                            <button class="button featured-button"><i class="ri-shopping-bag-2-line"></i></button>
+                        </article>
+
+                        <article class="featured-card mix R8">
+                            <div class="shape shape-smaller"></div>
+                            <h1 class="featred-title">Audi</h1>
+                            <h3 class="featured-subtitle">SPORTBACK</h3>
+                            <img src="../image/SPORTBACK.png" alt="" class="featured-img" style="height: 108px;"  />
+                            <h3 class="featured-price">시승예약</h3>
+                            <button class="button featured-button"><i class="ri-shopping-bag-2-line"></i></button>
+                        </article>
+
+                        <article class="featured-card mix audi">
+                            <div class="shape shape-smaller"></div>
+                            <h1 class="featred-title">Audi</h1>
+                            <h3 class="featured-subtitle">E-tron</h3>
+                            <img src="../image/pngegg (2).png" alt="" class="featured-img" style="height: 108px;"   />
+                            <h3 class="featured-price">시승예약</h3>
+                            <button class="button featured-button"><i class="ri-shopping-bag-2-line"></i></button>
+                        </article>
+
+                        <article class="featured-card mix R8">
+                            <div class="shape shape-smaller"></div>
+                            <h1 class="featred-title">Audi</h1>
+                            <h3 class="featured-subtitle">R8</h3>
+                            <img src="../image/r8.png" alt="" class="featured-img" style="height: 108px;"  />
+                            <h3 class="featured-price">시승예약</h3>
+                            <button class="button featured-button"><i class="ri-shopping-bag-2-line"></i></button>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="offer section">
+                <div class="offer-container container grid">
+                    <img src="../image/offer-bg.png" alt="" class="offer-bg" />
+                    <div class="offer-data">
+                        <h2 class="section-title offer-title">Audi R8 V10</h2>
+                        <p class="offer-description" style="color: #fff">
+                            아우디 R8 V10 퍼포먼스의 심장은 차축 사이에 위치한 자연 흡기 V10 엔진입니다 <br> <br>
+                            엔진 최고 출력이 610 ps에 달하며, 정지 상태에서 시속 100 km <br> <br>
+                            까지 가속하는 데 걸리는 시간이 3.1초로 줄었으며,  <br> <br>최고 속도는 331 km/h로 늘었습니다.
+                        </p>
+                        <a
+                            href="experience.html"
+                            class="button"
+                            style="
+                                border: 1px solid #fff;
+                                text-decoration: none;
+                                color: #fff;
+                                font-weight: bold;
+                                display: block;
+                                width: 200px;
+                                height: 50px;
+                                text-align: center;
+                                line-height: 50px;
+                            "
+                            >시승 예약</a
+                        >
+                    </div>
+                    <img src="../image/offer-img.png" alt="" class="offer-img" />
+                </div>
+            </section>
+        </main>
+
+
+        <footer>
+            <ul class="footer_list">
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">쿠키 정책</a></li>
+              <li><a href="#">위치정보사업 이용약관</a></li>
+              <li><a href="#">위치기반서비스 이용약관</a></li>
+              <li><a href="#">아우디 그룹 부정비리 제보</a></li>
+            </ul>
+            <div id="footer_icons">
+                <i class="fab fa-instagram" style="color:hotpink; font-size:24px; vertical-align: middle; margin-right:20px;" id="insta"></i>
+                <i class="fab fa-youtube-square" style="color:red; font-size:24px; vertical-align: middle;" id="youtube"></i>
+            </div>
+            <hr>
+            <div class="copy"><a href="#">&copy;2024 Audi Korea Ltd</a></div>
+      
+          </footer>
+        <a href="chatbot.html" class="scrollup" id="scroll-up" onclick="openPopup(event)">Chat</a>
+        <a id="back-to-top" href="#">Top </a>
+
+
+        <script src="https://kit.fontawesome.com/51a1670f78.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="../js/event.js"></script>
+        <script src="jquery-3.7.1.min.js"></script>
+        <script src="../js/banner.js"></script>
+        <script src="../js/gt.js"></script>
+        <script src="../js/scroll.js"></script>
+        <script src="../js/mixitup.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="../js/swiper-bundle.min.js"></script>
+        <script src="../js/script.js"></script>
+
+
+        <script>
+            function change() {
+                document.body.classList.toggle('dark_mode');
+            }
+        </script>
+
+        <script>
+                function openPopup(event) {
+                // 기본 이벤트 동작 막기
+                event.preventDefault();
+                let url = event.target.getAttribute('href');
+        
+                let width = 413;
+                let height = 800;
+
+                let rightPosition = (screen.width - width) / 1.1;
+                let topPosition = (screen.height - height) / 2;
+                window.open(
+                    url,
+                    'Popup',
+                    'width=' + width + ', height=' + height + ', left=' + rightPosition + ', top=' + topPosition
+                );
+            }
+            AOS.init();
+        </script>
+
+        <script>
+            // 메뉴수정
+            $(document).ready(function () {
+                $('#menu_icon').change(function () {
+                    if ($(this).is(':checked')) {
+                        $('#menu').css('left', '0');
+                        $('#menuIconOpen').hide(); // 햄버거 아이콘 숨기기
+                        $('#menuIconClose').show(); // X 아이콘 표시
+                    } else {
+                        $('#menu').css('left', '-350px');
+                        $('#menuIconOpen').show(); // 햄버거 아이콘 표시
+                        $('#menuIconClose').hide(); // X 아이콘 숨기기
+                    }
+                });
+
+                // 닫기 버튼을 클릭하여 메뉴 닫기
+                $(document).on('click', '.closebtn', function () {
+                    $('#menu)icon').prop('checked', false);
+                    $('#menu').css('left', '-350px');
+                    $('.close_btn').remove(); // 닫기 버튼 제거
+                    $('#menuIconOpen').show(); // 햄버거 아이콘 표시
+                    $('#menuIconClose').hide(); // X 아이콘 숨기기
+                });
+
+                $('.menu_box > li > a').click(function (e) {
+                    e.preventDefault();
+                    let clickedMenuItem = $(this).parent();
+
+    
+                    if (clickedMenuItem.hasClass('active')) {
+                        clickedMenuItem.removeClass('active');
+                        clickedMenuItem.find('.sub-menu').hide();
+                        $('.menu_box li a').removeClass('hide'); 
+                        return; 
+                    }
+
+    
+                    $('.sub-menu').hide();
+
+            
+                    $('.menu_box li').removeClass('active');
+
+        
+                    clickedMenuItem.addClass('active');
+
+            
+                    clickedMenuItem.find('.sub-menu').show();
+
+                    $('.menu_box li').not(clickedMenuItem).find('.sub-menu').hide();
+
+                
+                    $('.menu_box li a').not($(this)).addClass('hide');
+                });
+            });
+        </script>
+
+
+
+    </body>
+</html>

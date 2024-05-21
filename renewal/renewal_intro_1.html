@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renewal Audi</title>
+    <link rel="stylesheet" href="renewal_intro.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
+</head>
+<body>
+    <div class="container">
+        <a href="../html/로딩.html" class="gohome" target="_blank">리뉴얼 사이트<br><span>바로가기</span></a>
+        <section class="intro audilogo">
+            <div class="logo">
+                <img src="renewal_img/Crop_Audi_logo.png" alt="">
+                <h1>Audi</h1>
+            </div>
+        </section>
+
+        <section class="intro audislo">
+            <div class="slogan">
+                <h2 class="slogan_title">Vorsprung durch Technik</h2>
+                <img src="renewal_img/2024_76.png" alt="" class="slogan_image">
+            </div>
+        </section>
+            
+        
+
+        <section class="team teaminfo">
+            <h1>Team name</h1>
+            <div class="teaminfobox_1">
+                <div class="p1"><p>D</p><span>RIVEN</span></div>
+                <div class="p2"><p>D</p><span>ESIGNER</span></div>
+            </div>
+            <div class="member">
+                <h1>members</h1>
+                <ul>
+                    <li>정 은</li>
+                    <li>재 준</li>
+                    <li>서 현</li>
+                </ul>
+            </div>
+        </section>
+        <section class="team projectinfo">
+            <h1>Renewal point</h1>
+            <div class="p_info1">
+                <ul>
+                    <li>
+                        <div class="inner">
+                            <img src="renewal_img/layout.png" alt="">
+                        </div>
+                        <p>간결하고 깔끔한 <span>레이아웃</span></p>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <img src="renewal_img/info.png" alt="">
+                        </div>
+                        <p>신속하고 편리한 <span>정보접근성</span></p>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <img src="renewal_img/interface.png" alt="">
+                        </div>
+                        <p>조화로운 <span>인터페이스</span></p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="prototype">
+            <h1>Prototype</h1>
+            
+            <div class="proto_layout">
+                <img src="renewal_img/prototype/슬라이드6.PNG" alt="">
+
+                <input type="checkbox" name="layout_view" id="layout_view">
+                <label for="layout_view">
+                    <span class="v">자세히 보기</span>
+                    <span class="c">닫기</span>
+                    <ul class="proto_nav">
+                        <li><a href="#p_main" style="color:white;">Main</a></li>
+                        <li><a href="#p_sec1" style="color:white;">Section1</a></li>
+                        <li><a href="#p_sec2" style="color:white;">Section2</a></li>
+                        <li><a href="#p_sec3" style="color:white;">Section3</a></li>
+                        <li><a href="#p_footer" style="color:white;">Footer</a></li>
+                    </ul>
+                </label>
+                <div class="scrollicon">
+                    <img src="renewal_img/mouse_cursor_crop.png" alt="">
+                </div>
+                
+                    <div class="proto_view">                 
+                        <img src="renewal_img/prototype/슬라이드7.PNG" alt="" id="p_main">
+                        <img src="renewal_img/prototype/슬라이드8.PNG" alt="" id="p_sec1">
+                        <img src="renewal_img/prototype/슬라이드9.PNG" alt="" id="p_sec2">
+                        <img src="renewal_img/prototype/슬라이드10.PNG" alt="" id="p_sec3">
+                        <img src="renewal_img/prototype/슬라이드11.PNG" alt="" id="p_footer">
+                    </div>
+            </div>
+            
+        </section>
+        <section class="proto_video">
+            <h1>Prototype Video</h1>
+            <input type="checkbox" name="infobox" id="infobox">
+            <label for="infobox">info</label>
+            <div class="etc">
+                <label for="infobox">
+                    <span class="material-symbols-outlined" style="font-size: 25px;">
+                        cancel
+                        </span>
+                </label>
+                <table>
+                    <legend>Color / Font info</legend>
+                    <tr>
+                        <th rowspan="2">Color</th>
+                        <td>BG</th>
+                        <td>#111</td>
+                        <td class="bgbox"></th>
+                    </tr>
+                    <tr>
+                        <td>Text</th>
+                        <td>#eee</td>
+                        <td class="fontbox"></th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Font</th>
+                        <td>Eng</th>
+                        <td colspan="2">Audi Type Extended</th>
+                    </tr>
+                    <tr>
+                        <td>Kor</th>
+                        <td colspan="2">Pretendard</th>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="video">
+                <video src="레이아웃_test_video.mp4" muted controls></video>
+            </div>
+        </section>
+    </div>
+
+
+    <script>
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            console.log(value);
+
+            let logo = document.querySelector('.logo');
+            if(value>400) {
+                logo.style.animation = 'logohide 1.5s ease-out backwards';
+            } 
+
+            let sloganTitle = document.querySelector('.slogan_title');
+            if(value>550) {
+                sloganTitle.style.animation = 'slogantitlemove 1s ease-out forwards';
+            } else {
+                sloganTitle.style.animation = 'slogantitlehide 1s ease-out';
+            } 
+            if(value>1250) {
+                sloganTitle.style.animation = 'slogantitlehide 1s ease-out forwards';
+            }
+
+
+            let sloganImage = document.querySelector('.slogan_image');
+
+            if(value>600) {
+                sloganImage.style.animation = 'sloganimgmove 1.2s ease-out forwards';
+            } else {
+                sloganImage.style.animation = 'sloganimghide 1s ease-out';
+            }
+            if(value>1250) {
+                sloganImage.style.animation = 'sloganimghide 1.2s ease-in forwards';
+            }
+
+            let member = document.querySelector('.member');
+            if(value>1750) {
+                member.style.animation = 'membershow 1s ease-in forwards';
+            } else {
+                member.style.animation = 'memberhide 1s ease-out';
+            }
+            if(value>2500) {
+                member.style.animation = 'memberhide 1s ease-out';
+            }
+
+
+            let infolist = document.querySelector('.p_info1>ul');
+            if(value>2400) {
+                infolist.style.animation = 'infolistshow 1.2s ease-out forwards';
+            } else {
+                infolist.style.animation = 'infolisthide 1.2s ease-out ';
+            }
+            if(value>3700) {
+                infolist.style.animation = 'infolisthide 1.2s ease-out forwards';
+            }
+
+            let layout = document.querySelector('.proto_layout');
+            if(value>3700) {
+                layout.style.animation = 'layoutshow 2s ease-out forwards';
+            } else {
+                layout.style.animation = 'layouthide 2s ease-out forwards';
+            }
+            if(value>4500) {
+                layout.style.animation = 'layouthide 2s ease-out forwards';
+            }
+
+            let gohome = document.querySelector('.gohome');
+            if(value>0) {
+                gohome.style.animation = 'gohomeshow 1s ease-out forwards';
+            } else {
+                gohome.style.animation = 'gohomehide 1s ease-out backwards';
+            }  
+            
+
+
+
+
+        })
+    </script>
+
+</body>
+</html>

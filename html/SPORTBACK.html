@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Audi_Model</title>
+        <!-- 제이쿼리  -->
+        <script src="../jquery-3.7.1.min.js"></script>
+        <!-- suv css  -->
+        <link rel="stylesheet" href="../css/sportback.css">
+        <!-- 로그인 css -->
+        <link rel="stylesheet" href="../css/login.css">
+        <!-- 스와이퍼 css js -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- aos css -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <!-- 아이콘 js  -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <!-- 구글 아이콘 css -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
+    
+
+    <body>
+        <div id="container">
+            <!-- 헤더 메뉴 -->
+            <header>
+                <div class="icon_left">
+                    <input type="checkbox" name="menu_icon" id="menu_icon" />
+                    <label for="menu_icon">
+                        <span
+                            id="menuIconOpen"
+                            class="material-symbols-outlined"
+                            style="font-size: 35px; font-weight: 600"
+                            >menu</span
+                        >
+                        <span
+                            id="menuIconClose"
+                            class="material-symbols-outlined"
+                            style="font-size: 35px; font-weight: 600; display: none"
+                            >&times;</span
+                        >
+                    </label>
+                </div>
+
+                <div class="logo">
+                    <a href="main.html" target="_blank">
+                        <img src="../image/Crop_Audi_logo.png" alt="AudiLogo" width="100"  />
+                    </a>
+                </div>
+
+                <div class="icon_right">
+                    <div class="searchicon">
+                        <span class="material-symbols-outlined" style="font-size:32px; font-weight:600">search</span>
+                        <input type="text" name="" id="" placeholder="Search">
+                    </div>
+
+                    <div class="lock">
+                        <div class="lockicon">
+                            <span class="material-symbols-outlined" style="font-size:32px; font-weight:600;" >lock</span>
+                        </div>
+                        <div class="login">
+                            <input type="text" name="id" id="id" placeholder="아이디">
+                            <input type="password" name="pw" id="pw" placeholder="비밀번호">
+                        </div>
+                        <div class="loginbtn">
+                            <button><a href="./login_form.html" target="_blank">sign up</a></button>
+                            <button><a href="./login_form.html" target="_blank">log in</a></button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <nav id="menu">
+                <ul class="icon_box">
+                    <li>
+                        <a href="#"
+                            ><span class="material-symbols-outlined" style="font-size: 30px; font-weight: 600"
+                                >person</span
+                            ></a
+                        >
+                    </li>
+                    <li>
+                        <a href="#"
+                            ><span class="material-symbols-outlined" style="font-size: 30px; font-weight: 600"
+                                >event</span
+                            ></a
+                        >
+                    </li>
+                    <li>
+                        <a href="#"
+                            ><span class="material-symbols-outlined" style="font-size: 30px; font-weight: 600"
+                                >favorite</span
+                            ></a
+                        >
+                    </li>
+                    <li>
+                        <a href="#"
+                            ><span class="material-symbols-outlined" style="font-size: 30px; font-weight: 600"
+                                >shopping_cart</span
+                            ></a
+                        >
+                    </li>
+                </ul>
+                <ul class="menu_box">
+                    <li class="nav__item">
+                        <a href="company.html" class="nav__item">About</a>
+                        <ul class="sub-menu">
+                            <li><a href="company.html">COMPANY</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Models</a>
+                        <ul class="sub-menu">
+                            <li><a href="models_0401.html">LINE-UP</a></li>
+                            <li><a href="models_sedan.html">SEDAN</a></li>
+                            <li><a href="#">SUV</a></li>
+                            <li><a href="#">SPORTBACK</a></li>
+                            <li><a href="#">E-TRON</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="center.html" class="nav__link">Center</a>
+                        <ul class="sub-menu">
+                            <li><a href="center.html">CENTERS</a></li>
+                        </ul>
+                    </li class="nav__item">
+                    <li>
+                        <a href="#" class="nav__link">Experience</a>
+                        <ul class="sub-menu">
+                            <li><a href="experience.html">Experience</a></li>
+                        </ul>
+                    </li class="nav__item">
+                    <li>
+                        <a href="#" class="nav__link">Exclusive</a>
+                        <ul class="sub-menu">
+                            <li><a href="exclusive.html">Exclusive</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 헤더 메뉴 끝 -->
+
+            <main>
+                <div class="main-banner">
+                    <img src="../image/Sportback-img/Sportback-main.jpg" alt="">
+                    <div class="banner-text">
+                        <h1 style="font-size: 3rem;">Audi Q4 Sportback</h1> <br><br>
+                        <a href="#">차량 상담 신청</a>
+                    </div>
+
+                    <div class="sub_menu">
+                        <ul>
+                            <li style="font-weight: bold; text-decoration: underline; text-underline-offset: 5px;"><a href="#">개요</a></li>
+                            <li><a href="#">갤러리</a></li>
+                            <li><a href="#">하이라이트</a></li>
+                            <li><a href="#">디자인</a></li>
+                            <li><a href="#">제원</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+
+            <section class="section-1">
+                <div class="section-1-text">
+                    <h1>아우디 첫번째 컴팩트 순수 전기 SUV 쿠페 <br>
+                        The new Audi Q4 Sportback e-tron <br></h1><br>
+                        <p>복합 연비(km/kWh) : 4.8km/kWh<br>
+                            CO₂배출량(g/km) : 0g/km <br> <br>
+                            Q4 Sportback e-tron <br> <br>
+                        
+                        </p>
+                        <ul class="section-1-icon">
+                            <li><a href="#">
+                                <img src="../image/model-page/sp_model.png" alt="">
+                            </a>
+                            </li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                        <div class="gt-description">
+                            <div class="gt-gallery" id="gallery1">
+                                <img class="gallery-hightlight" src="../image/Sportback-img/section1-1.jpg" alt="gt" />
+                                <div class="gt-preview">
+                                    <img src="../image/Sportback-img/section1-1.jpg" class="gt-active" alt="" />
+                                    <img src="../image/Sportback-img/section1-2.jpg" alt="" />
+                                    <img src="../image/Sportback-img/section1-3.jpg" alt=""  />
+                                    <img src="../image/Sportback-img/section1-4.jpg" alt="" />
+                                    <img src="../image/Sportback-img/section1-5.jpg" alt="" />
+                                    <img src="../image/Sportback-img/section1-6.jpg" alt="" />
+                                    <img src="../image/Sportback-img/section1-7.jpg" alt="" />
+                                    <img src="../image/Sportback-img/section1-8.jpg" alt="" />
+                                    <img src="../image/Sportback-img/section1-9.jpg" alt="" />
+                                    <img src="../image/Sportback-img/section1-10.jpg" alt="" />
+                                </div>
+                            </div>
+                </div>  
+            </section>
+
+
+            <section class="section-2" >
+                <div class="section-2-text">
+                    <h1>새로운 관점</h1> <br>
+                    <p>결연한 앞모습과 강인한 후면 디자인. 아우디 Q4 e-tron의 디자인은 전기 모빌리티의 미래를 제시합니다. <br>
+                    </p>
+                </div>
+                <div class="section-2-img">
+                    <img src="../image/Sportback-img/section2.jpg" alt=""  style="height: 1100px; width: 100%;">
+                </div>
+            </section>
+
+            <section class="section-2" >
+                <div class="section-2-text">
+                    <h1>강렬한 첫인상</h1> <br>
+                    <p>아우디 Q4 Sportback e-tron의 스포티한 디자인은 미래 전기 모빌리티의 매력을 더욱 강조합니다. 결연한 앞모습과 강인한 후면과 함께, 아우디 Q4 Sportback e-
+                        tron의 역동적인 실루엣은 후면까지 부드럽게 이어집니다. <br>
+                    </p>
+                </div>
+                <div class="section-2-img">
+                    <img src="../image/Sportback-img/section3.jpg" alt=""  style="height: 1100px; width: 100%;">
+                </div>
+            </section>
+
+
+
+            <section class="section-3">
+                <div class="section-3-text">
+                    <h1 style="font-size: 2rem;">직관적인 디자인</h1> <br>
+                    <p>아우디 Q4 e-tron의 조작 및 디스플레이 장치는 디자인 요소로서의 기능을 가집니다. <br>
+                        또한 음성 제어를 지원합니다.</p>
+                </div>
+                <div class="section-3-img">
+                    <img src="../image/Sportback-img/section4.jpg" alt="">
+                </div>
+            </section>
+
+
+            <section class="section-3" style="margin-top: -5%;">
+                <div class="section-3-img">
+                    <img src="../image/Sportback-img/section5.jpg" alt="">
+                </div>
+                <div class="section-3-text" style="margin-left: 5%;">
+                    <h1 style="font-size: 2rem;">Sportback이라 불리는 이유</h1> <br>
+                    <p>아우디 Q4 Sportback e-tron의 후방은 역동적인 추진력이 그대로 드러납니다. 루프 <br>
+                        엣지 스포일러와 수평 스트럿이 있는 인상적인 형태의 범퍼 디퓨저 인서트, 그리고 <br>
+                        중앙에 조광된 e-트론 로고는 스포티함을 더욱 강조합니다.</p>
+                </div>
+            </section>
+
+            <section class="section-3" style="margin-top: -5%;">
+                <div class="section-3-text" style="margin-left: 1%;">
+                    <h1 style="font-size: 2rem;">더욱 진보된 조명 기술</h1> <br>
+                    <p>4가지 중 선택이 가능한 주간 주행등 시그니처와 다이내믹 라이트 시퀀싱이 결합되어, <br>
+                        혁신적인 라이팅 기술을 자랑합니다.<br></p>
+                </div>
+                <div class="section-3-img">
+                    <img src="../image/Sportback-img/section6.jpg" alt="">
+                </div>
+            </section>
+
+            <section class="section-2" >
+                <div class="section-2-text">
+                    <h1>하이 테크놀로지</h1> <br><br>
+                    <p>혁신적인 기술, 기능에 초점을 둔 스포티한 디자인. 아우디 Q4 e-tron의 진보적인 실내 공간 <br>
+                    </p>
+                </div>
+                <div class="section-2-img">
+                    <img src="../image/Sportback-img/section7.jpg" alt=""  style="height: 1100px; width: 100%;">
+                </div>
+            </section>
+
+
+            <section class="section-2" >
+                <div class="section-2-text">
+                    <h1>더욱 즐거운 주행을 표현하다</h1> <br><br>
+                    <p>Q4 Sportback e-tron의 스포티한 외관은 역동성과 우아함을 강조합니다. <br>
+                    </p>
+                </div>
+                <div class="section-2-img">
+                    <img src="../image/Sportback-img/section8.jpeg" alt=""  style="height: 800px; width: 100%;">
+                </div>
+            </section>
+
+            <section class="section-2" >
+                <div class="section-2-text">
+                    <h1>미래를 내 손안에</h1> <br><br>
+                    <p>스티어링 휠의 상단 스포크 쪽에는 블랙 패널 모양의 표면과 활성화된 버튼들이 표시되는 백라이트 기능 영역이 있습니다. 버튼들은 서로 구분되도록 살짝 돌출되어 <br>
+                        사용하기 쉬우며, 버튼을 누르면 부드러운 햅틱 피드백이 제공됩니다.
+                    </p>
+                </div>
+                <div class="section-2-img">
+                    <img src="../image/Sportback-img/section9.jpg" alt=""  style="height: 800px; width: 100%;">
+                </div>
+            </section>
+
+
+            <section class="section-7">
+                <div class="section-7-text">
+                    <h1 style="font-size: 2rem; font-weight: bold;">넉넉한 공간</h1> <br>
+                    <p>뒷좌석은 앞좌석보다 약 7센티미터가 높으며, 탑승자들에게 충분한 헤드룸과 레그룸을 <br>
+                        제공합니다. 아우디의 컴팩트 전기 SUV는 뒷좌석 등받이를 분할하여 더 많은 공간을 <br>
+                        확보합니다. 일상적인 주행은 물론 여가 생활을 즐기는데도 적합합니다. <br></p>
+                </div>
+                <div class="section-7-img">
+                    <img src="../image/Sportback-img/section10.jpg" alt="">
+                </div>
+            </section>
+
+            <section class="section-7">
+                <div class="section-7-img">
+                    <img src="../image/Sportback-img/section11.jpg" alt="" style="margin-left: 7%;">
+                </div>
+                <div class="section-7-text" style="margin-left: 7%;">
+                    <h1 style="font-size: 2rem; font-weight: bold;">넉넉한 공간과 실용성</h1> <br>
+                    <p>아우디 Q4 Sportback e-tron은 글로브 박스를 포함해 총 24.8 리터의 적재 용량을 <br>
+                        제공하며, 다양한 수납 솔루션을 제공합니다. 트렁크에는 520 리터의 짐을 실을 수 있고 <br>
+                        뒷좌석을 접으면 공간이 1,490 리터까지 늘어납니다.<br></p>
+                </div>
+            </section>
+
+            <section class="section-2" >
+                <div class="section-2-text">
+                    <h1>맞춤화된 역동성</h1> <br><br>
+                    <p>옵션으로 제공되는 아우디 드라이브 셀렉트의 5가지 모드 중 선택해, 효율성에서 역동성까지 차량 특성을 원하는 대로 설정할 수 있습니다.<br>
+                    </p>
+                </div>
+                <div class="section-2-img">
+                    <img src="../image/Sportback-img/section12.jpg" alt=""  style="height: 1100px; width: 100%;">
+                </div>
+            </section>
+
+
+            <section class="section-7">
+                <div class="section-7-img">
+                    <img src="../image/Sportback-img/section13.jpg" alt="" style="margin-left: 7%;">
+                </div>
+                <div class="section-7-text" style="margin-left: 7%;">
+                    <h1 style="font-size: 2rem; font-weight: bold;">간편한 충전</h1> <br>
+                    <p>가정에서 쉽고 편리하게 차량을 충전할 수 있습니다. 전원 소켓이 있는 곳이라면 <br>
+                        어디에서든 충전이 가능하며, 호환되는 산업용 전원 소켓¹을 사용하여 보다 빠른 충전을 <br>
+                        지원합니다.<br></p>
+                </div>
+            </section>
+
+
+            <h1 style="font-size: 3rem; text-align: center; font-weight: bold; margin-bottom: -5%; margin-top: 5%;">SUV Gallery</h1>
+            <div class="grid-container">
+                
+                <div class="grid-item first-item">
+                    <img class="dark" src="../image/Sportback-img/Sportback-main.jpg" alt="" />
+                </div>
+                <div class="grid-item">
+                    <img class="dark" src="../image/Sportback-img/section2.jpg" alt="" />
+                </div>
+                <div class="grid-item">
+                    <img class="dark" src="../image/Sportback-img/section3.jpg" alt="" />
+                </div>
+                <div class="grid-item">
+                    <img class="dark" src="../image/Sportback-img/section4.jpg" alt="" />
+                </div>
+                <div class="grid-item">
+                    <img class="dark" src="../image/Sportback-img/section5.jpg" alt="" />
+                </div>
+                <div class="grid-item">
+                    <img class="dark" src="../image/Sportback-img/section6.jpg" alt="" />
+                </div>
+                <div class="grid-item">
+                    <img class="dark" src="../image/Sportback-img/section7.jpg" alt="" />
+                </div>
+                <div class="grid-item">
+                    <img class="dark" src="../image/Sportback-img/section1-8.jpg" alt="" />
+                </div>
+                <div class="grid-item">
+                    <img class="dark" src="../image/Sportback-img/section1-2.jpg" alt="" />
+                </div>
+                <div class="grid-item second-item">
+                    <img class="dark" src="../image/Sportback-img/section9.jpg" alt="" />
+                </div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+            </div>
+
+
+
+
+            <footer>
+                <div class="footer_1">
+                    <ul class="first">
+                        <li><a href="#">사이트맵</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#" style="color: #c36f51">개인정보 처리방침</a></li>
+                        <li><a href="#">저작권 안내</a></li>
+                        <li><a href="#">보증안내</a></li>
+                        <li><a href="#">자동차 교환 및 환불 중재 규정 안내</a></li>
+                        <li><a href="#">하자 재발 통보 안내</a></li>
+                    </ul>
+                </div>
+            </footer>
+            <a href="chatbot.html" class="scrollup" id="scroll-up" onclick="openPopup(event)">Chat</a>
+            <a id="back-to-top" href="#">Top </a>
+        </div>
+
+        <script src="https://kit.fontawesome.com/51a1670f78.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="../js/event.js"></script>
+        <script src="jquery-3.7.1.min.js"></script>
+        <script src="../js/swiper.js"></script>
+        <script src="../js/banner.js"></script>
+        <script src="../js/gt.js"></script>
+        <script src="../js/scroll.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            let video = document.getElementById('video');
+
+            video.addEventListener('ended', function() {
+                this.currentTime = 0;
+                this.play();
+            }, false);
+        });
+        </script>
+
+        <script>
+                function openPopup(event) {
+                // 기본 이벤트 동작 막기
+                event.preventDefault();
+                let url = event.target.getAttribute('href');
+        
+                let width = 413;
+                let height = 800;
+
+                let rightPosition = (screen.width - width) / 1.1;
+                let topPosition = (screen.height - height) / 2;
+                window.open(
+                    url,
+                    'Popup',
+                    'width=' + width + ', height=' + height + ', left=' + rightPosition + ', top=' + topPosition
+                );
+            }
+            AOS.init();
+        </script>
+
+        <script>
+            // 메뉴수정
+            $(document).ready(function () {
+                $('#menu_icon').change(function () {
+                    if ($(this).is(':checked')) {
+                        $('#menu').css('left', '0');
+                        $('#menuIconOpen').hide(); // 햄버거 아이콘 숨기기
+                        $('#menuIconClose').show(); // X 아이콘 표시
+                    } else {
+                        $('#menu').css('left', '-350px');
+                        $('#menuIconOpen').show(); // 햄버거 아이콘 표시
+                        $('#menuIconClose').hide(); // X 아이콘 숨기기
+                    }
+                });
+
+                // 닫기 버튼을 클릭하여 메뉴 닫기
+                $(document).on('click', '.closebtn', function () {
+                    $('#menu)icon').prop('checked', false);
+                    $('#menu').css('left', '-350px');
+                    $('.close_btn').remove(); // 닫기 버튼 제거
+                    $('#menuIconOpen').show(); // 햄버거 아이콘 표시
+                    $('#menuIconClose').hide(); // X 아이콘 숨기기
+                });
+
+                $('.menu_box > li > a').click(function (e) {
+                    e.preventDefault();
+                    let clickedMenuItem = $(this).parent();
+
+    
+                    if (clickedMenuItem.hasClass('active')) {
+                        clickedMenuItem.removeClass('active');
+                        clickedMenuItem.find('.sub-menu').hide();
+                        $('.menu_box li a').removeClass('hide'); 
+                        return; 
+                    }
+
+    
+                    $('.sub-menu').hide();
+
+            
+                    $('.menu_box li').removeClass('active');
+
+        
+                    clickedMenuItem.addClass('active');
+
+            
+                    clickedMenuItem.find('.sub-menu').show();
+
+                    $('.menu_box li').not(clickedMenuItem).find('.sub-menu').hide();
+
+                
+                    $('.menu_box li a').not($(this)).addClass('hide');
+                });
+            });
+        </script>
+
+        <!-- <script>
+            // 링크 클릭 이벤트의 기본 동작을 막음
+            document.querySelectorAll('a').forEach((a) => {
+                a.addEventListener('click', function (event) {
+                    event.preventDefault(); 
+                });
+            });
+        </script> -->
+    </body>
+</html>

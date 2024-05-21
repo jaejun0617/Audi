@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Audi_Main</title>
+        <!-- 제이쿼리  -->
+        <script src="./jquery-3.7.1.min.js"></script>
+        <!-- 메인 css  -->
+        <link rel="stylesheet" href="../css/main.css" />
+        <!-- 로그인 css -->
+        <link rel="stylesheet" href="../css/login.css">
+        <!-- 스와이퍼 css js -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- aos css -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <!-- 아이콘 js  -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <!-- 구글 아이콘 css -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    </head>
+    
+
+    <body>
+        <div id="container">
+            <!-- 헤더 메뉴 -->
+            <header>
+                <div class="icon_left">
+                    <input type="checkbox" name="menu_icon" id="menu_icon" />
+                    <label for="menu_icon">
+                        <span
+                            id="menuIconOpen"
+                            class="material-symbols-outlined"
+                            style="font-size: 35px; font-weight: 600"
+                            >menu</span
+                        >
+                        <span
+                            id="menuIconClose"
+                            class="material-symbols-outlined"
+                            style="font-size: 35px; font-weight: 600; display: none"
+                            >&times;</span
+                        >
+                    </label>
+                </div>
+
+                <div class="logo">
+                    <a href="main.html" target="_blank">
+                        <img src="../logo.png" alt="AudiLogo" width="100"  />
+                    </a>
+                </div>
+
+                <div class="icon_right">
+                    <div class="searchicon">
+                        <span class="material-symbols-outlined" style="font-size:32px; font-weight:600">search</span>
+                        <input type="text" name="" id="" placeholder="Search">
+                    </div>
+
+                    <div class="lock">
+                        <div class="lockicon">
+                            <span class="material-symbols-outlined" style="font-size:32px; font-weight:600;" >lock</span>
+                        </div>
+                        <div class="login">
+                            <input type="text" name="id" id="id" placeholder="아이디">
+                            <input type="password" name="pw" id="pw" placeholder="비밀번호">
+                        </div>
+                        <div class="loginbtn">
+                            <button><a href="login_form.html" target="_blank">sign up</a></button>
+                            <button><a href="login_form.html" target="_blank">log in</a></button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <nav id="menu">
+                <ul class="icon_box">
+                    <li>
+                        <a href="#"
+                            ><span class="material-symbols-outlined" style="font-size: 30px; font-weight: 600"
+                                >person</span
+                            ></a
+                        >
+                    </li>
+                    <li>
+                        <a href="#"
+                            ><span class="material-symbols-outlined" style="font-size: 30px; font-weight: 600"
+                                >event</span
+                            ></a
+                        >
+                    </li>
+                    <li>
+                        <a href="#"
+                            ><span class="material-symbols-outlined" style="font-size: 30px; font-weight: 600"
+                                >favorite</span
+                            ></a
+                        >
+                    </li>
+                    <li>
+                        <a href="#"
+                            ><span class="material-symbols-outlined" style="font-size: 30px; font-weight: 600"
+                                >shopping_cart</span
+                            ></a
+                        >
+                    </li>
+                </ul>
+                <ul class="menu_box">
+                    <li class="nav__item">
+                        <a href="company.html" class="nav__item" target="_blank">About</a>
+                        <ul class="sub-menu">
+                            <li><a href="company.html">COMPANY</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Models</a>
+                        <ul class="sub-menu">
+                            <li><a href="models_0401.html" target="_blank">LINE-UP</a></li>
+                            <li><a href="models_sedan.html" target="_blank">SEDAN</a></li>
+                            <li><a href="#">SUV</a></li>
+                            <li><a href="#">SPORTBACK</a></li>
+                            <li><a href="#">E-TRON</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="center.html" class="nav__link" target="_blank">Center</a>
+                        <ul class="sub-menu">
+                            <li><a href="center.html" target="_blank">CENTERS</a></li>
+                        </ul>
+                    </li class="nav__item">
+                    <li>
+                        <a href="#" class="nav__link">Experience</a>
+                        <ul class="sub-menu">
+                            <li><a href="experience.html" target="_blank">Experience</a></li>
+                        </ul>
+                    </li class="nav__item">
+                    <li>
+                        <a href="#" class="nav__link">Exclusive</a>
+                        <ul class="sub-menu">
+                            <li><a href="exclusive.html" target="_blank">Exclusive</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 헤더 메뉴 끝 -->
+
+            <!-- 메인 슬라이드 -->
+            <main>
+                <div class="main-banner">
+                    <div class="swiper mySwiper" style="width: 100%; height: calc(100vh - 100px);">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="../image/banner/banner_1.jpg" alt="" />
+                                <div class="swiper-text one">
+                                    <h2 data-aos="fade-up" data-aos-duration="1000" style="font-size: 3.2rem; letter-spacing:-3px">당신의 내일을 디자인하다.</h2>
+                                    <br />
+                                    <p data-aos="fade-up" data-aos-duration="1000" style="font-size: 4.7rem; letter-spacing: -5px;">
+                                        The new Audi A7 Sportback
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../image/banner/banner_2.jpg" alt="" />
+                                <div class="swiper-text two">
+                                    <h2 style="font-size: 3.2rem; letter-spacing:-3px;">혁신에 집중하다.</h2>
+                                    <br />
+                                    <p style="font-size: 5.2rem; letter-spacing: -5px;">
+                                        Audi RS 5 Sportback <br>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../image/banner/banner_3.jpg" alt="" />
+                                <div class="swiper-text three">
+                                    <h2 style="font-size: 3.2rem; letter-spacing:-3px">압도적 퍼포먼스의 아름다움.</h2>
+                                    <br />
+                                    <p style="font-size: 5.2rem; letter-spacing: -5px;">
+                                        Audi RS 7 <br>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../image/banner/banner_4.jpg" alt="" />
+                                <div class="swiper-text four">
+                                    <h2 style="font-size: 3.2rem; letter-spacing:-3px">플러그인 하이브리드<br><br>디자인으로 완성되다.</h2>
+                                    <br />
+                                    <p style="font-size: 5.5rem; letter-spacing: -5px;">
+                                        The new Audi A7 SUV <span style="font-size: 5rem; color:red">TFSI e</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../image/banner/banner_5.jpg" alt="" />
+                                <div class="swiper-text five">
+                                    <h2 style="font-size: 3rem; letter-spacing:-3px">우아한 디자인과 효율성의 조화.</h2>
+                                    <br />
+                                    <p style="font-size: 2rem; letter-spacing: -5px;">
+                                        럭셔리한 쿠페의 디자인과 혁신적인 플로그인 하이브리드 차량 기술의 결합.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../image/banner/banner_6.jpg" alt="" />
+                                <div class="swiper-text six">
+                                    <h2 style="font-size: 3rem; letter-spacing:-3px">컴팩트 스포츠 세단, 퍼포먼스로 완성되다.</h2>
+                                    <br />
+                                    <p style="font-size: 5.2rem; letter-spacing: -5px;">
+                                        The new Audi RS 3
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../image/banner/banner_7.jpg" alt="" />
+                                <div class="swiper-text seven">
+                                    <h2 style="font-size: 4rem; letter-spacing:-3px">실용적이며 아름다운 라이트.</h2>
+                                    <br />
+                                    <p style="font-size: 2rem; letter-spacing: -5px;">
+                                        아우디의 또 다른 시각적 특징은 진보적인 조명 디자인입니다. <br>
+                                         LED 기술이 적용된 헤드라이트가 기본 장착됩니다. 
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../image/banner/banner_8.jpg" alt="" />
+                                <div class="swiper-text eight">
+                                    <h2 style="font-size: 3rem; letter-spacing:-3px">Urban SUV의 새로운 아이콘</h2>
+                                    <br />
+                                    <p style="font-size: 2rem; letter-spacing: 10px;">
+                                        눈길을 사로잡는 젊고 세련된 감각의 스타일과 진보적인 디자인
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next" style="color: #fff"></div>
+                        <div class="swiper-button-prev" style="color: #fff"></div>
+                        <!-- <div class="swiper-pagination"></div> -->
+                        <img src="../image/mouse-cursor.png" alt="" id="pageicon">
+                    </div>
+                </div>
+            </main>
+            <!-- 메인 슬라이드 끝-->
+
+
+
+            <!-- 섹션 1 -->
+
+            <div id="bgbox_models">
+                <!-- 중간배경을 넣었음 -->
+                <div class="bgbox_text">
+                    MODELS
+                </div>
+            </div>
+            <section id="models">
+                <ul class="models_list">
+                    <li>
+                        <div class="models_img">
+                            <img src="../image/sedan_A8_crop2.jpg" alt="">
+                        </div>
+                        <div class="opa_box">
+                            <h2>SEDAN</h2>
+                            <a href="SEDAN.html" target="_blank"><span class="t"></span>VIEW<span class="b"></span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="models_img">
+                            <img src="../image/suv_Q8_crop.jpg" alt="">
+                        </div>
+                        <div class="opa_box">
+                            <h2>SUV</h2>
+                            <a href="SUV.html" target="_blank"><span class="t"></span>VIEW<span class="b"></span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="models_img">
+                            <img src="../image/sportback_S7tdi_crop.jpg" alt="">
+                        </div>
+                        <div class="opa_box">
+                            <h2>SPORTBACK</h2>
+                            <a href="SPORTBACK.html" target="_blank"><span class="t"></span>VIEW<span class="b"></span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="models_img">
+                            <img src="../image/etron_crop.jpg" alt="">
+                        </div>
+                        <div class="opa_box">
+                            <h2>E-TRON</h2>
+                            <a href="e-tion.html" target="_blank"><span class="t"></span>VIEW<span class="b"></span></a>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 섹션 1 끝 -->
+
+            <!-- 섹션 2 -->
+            <div id="slider_container">
+                <section class="section-2">
+                    <ul class="ul_slider">
+                        <li class="item-slider">
+                            <figure>
+                                <img src="../image/news_img/news1.jpg">
+                                <figcaption>
+                                    <h2>‘아우디 김포공항 서비스센터’ 신규 오픈 </h2>
+                                    <p>아우디 코리아(사장: 임현기)는 아우디 공식딜러사인 </p>
+                                    <p>바이에른오토(대표 권혁민, 하승엽)가 ‘아우디 김포공항 서비스센터’를 신규 오픈한다고 밝혔다.</p>
+                                    <br />
+                                    <button class="newsView">VIEW DETAIL</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="item-slider">
+                            <figure>
+                                <img src="../image/news_img/news2.jpg"/>
+                                <figcaption>
+                                    <h2>아우디 코리아, 고객 초청 '2023 아우디</h2>
+                                    <h2>서비스 익스피리언스' 진행</h2>
+                                    <p>아우디 코리아(사장: 임현기)는 아우디 강동 서비스센터에서 고객 초청 A/S 서비스 체험 행사인</p>
+                                    <p>'2023 아우디 서비스 익스피리언스(2023 Audi Service Experience)'를 진행했다.</p>
+                                    <br />
+                                    <button class="newsView">VIEW DETAIL</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="item-slider">
+                            <figure>
+                                <img src="../image/news_img/news3.jpg"/>
+            
+                                <figcaption>
+                                    <h2>팀 아우디 스포트, 다카르랠리 2023시즌 우수한</h2>
+                                    <h2>스테이지 성적으로 마무리</h2>
+                                    <p>아우디는 여러 어려움에도 다카르 랠리의 2023년 시즌 마지막까지 우수한 성적으로 마무리했다.</p>
+                                    <br />
+                                    <button class="newsView">VIEW DETAIL</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="item-slider">
+                            <figure>
+                                <img src="../image/news_img/news4-1.jpg"/>
+                                <figcaption>
+                                    <h2 style="color:#111">아우디 코리아, ‘2024 아우디 드라이빙</h2>
+                                    <h2 style="color:#111">익스피리언스-알프스 투어’ 진행</h2>
+                                    <p style="color:#111">아우디 코리아 (사장: 임현기)는 ‘2024 아우디 드라이빙 익스피리언스 </p>
+                                    <p style="color:#111">알프스 투어 (2024 Audi Driving Experience – Alps tour)’를 진행한다고 밝혔다.</p>
+                                    <br />
+                                    <button class="newsView"style="color:#111">VIEW DETAIL</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="item-slider">
+                            <figure>
+                                <img src="../image/news_img/news5-1.jpg"/>
+                                <figcaption>
+                                    <h2>아우디, 잉골슈타트에 새로운 자동차 안전 센터 개관</h2>
+                                    <p>아우디는 독일 잉골슈타트 본사 부지 안에 새로운 자동차 안전 센터를 개관했다고 밝혔다.</p>
+                                    <p>새로운 자동차 안전 센터는 성능을 대폭 개선한 최첨단 충돌 테스트 시설로 1억 유로 가량이 투자되었다.</p>
+                                    <br />
+                                    <button class="newsView">VIEW DETAIL</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="item-slider">
+                            <figure>
+                                <img src="../image/news_img/news6.jpg"/>
+                                <figcaption>
+                                    <h2>아우디 코리아</h2>
+                                    <h2>‘아우디 스타필드 수원 컨셉 스토어’ 오픈</h2>
+                                    <p>아우디 코리아(사장: 임현기)는 아우디 공식 딜러사인 바이에른오토</p>
+                                    <p>(대표: 권혁민, 하승엽)가 스타필드 수원에 신규 전시장을 오픈했다고 밝혔다.</p>
+                                    <br />
+                                    <button class="newsView">VIEW DETAIL</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="item-slider">
+                            <figure>
+                                <img src="../image/news_img/news7-1.jpg"/>
+                                <figcaption>
+                                    <h2>아우디, 드리프트 아티스트 켄 블락과</h2>
+                                    <h2>전기 랠리카 ‘아우디 S1후니트론’ 공개</h2>
+                                    <p>드리프트 퍼포먼스로 이름난 미국의 드리프트 아티스트 켄 블락(Ken Block)이 아우디와 파트너쉽을</p>
+                                    <p>맺고 제작한 일렉트리카나 (Electrikana)비디오를 공개했다.</p>
+                                    <br />
+                                    <button class="newsView">VIEW DETAIL</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="item-slider">
+                            <figure>
+                                <img src="../image/news_img/news8.jpg"/>
+                                <figcaption>
+                                    <h2>아우디, 크로스오버 쿠페 아우디</h2>
+                                    <h2>액티브스피어 콘셉트 공개</h2>
+                                    <p>아우디는 미래 럭셔리 세그먼트에 대한 비전을 보여주는 스피어 시리즈의 네 번째 모델이자 스피어</p>
+                                    <p>콘셉트 차량의 대미를 장식할 아우디 액티브스피어 콘셉트 (Audi activesphere concept)를 공개했다.</p>
+                                    <br />
+                                    <button class="newsView">VIEW DETAIL</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                    <nav class="nav_slide">
+                        <ion-icon class="btn prev" name="chevron-back-circle-outline"></ion-icon>
+                        <ion-icon class="btn next" name="chevron-forward-circle-outline"></ion-icon>
+                    </nav>
+                    <!-- 숨겨졌다가 버튼 클릭하면 나올 div -->
+                                
+                    <div class="hiddenNews">
+                        <button id="newsClose">X</button>
+            
+                        <h1>아우디, EA 스포츠 포뮬러1 (F1) 게임에 등장</h1>
+                        <div class="hiddenNews_align">
+                        <img src="../image/news_img/news1.jpg" id="change_newsImg"/>
+                        <div class="news_content">
+                        <p>- 아우디 포뮬러 1 (F1) 쇼카, EA 스포츠 ‘F1® 22’ 레이싱 게임에서 디지털로 구현</p>
+                        <p>- 플레이스테이션, Xbox와 PC로 플레이 가능</p>
+                        <p>- 아우디 브랜드 총괄 헨릭 벤더스, “아우디 포뮬러 1 쇼카가 가상세계에서도 많은 팬들을 확보할 것”</p>
+                        <br>
+                        <p>아우디는 아우디 포뮬러 1 쇼카가 코드마스터즈에서 출시한 EA 스포츠 ‘F1® 22’ 레이싱 게임에 등장한다고 밝혔다. 이를 통해 세계 최정상 모터스포츠인 포뮬러 1의 팬들은 2026년까지 기다릴 필요없이 아</p>
+                        <p>우디가 처음으로 참여하는 F1 레이스를 게임으로 경험할 수 있게 되었다.</p>
+                        <p>아우디는 지난 8월 말 벨기에에서 개최된 그랑프리 스파프랑코르샹에서 포뮬러1 (F1) 참가를 발표하는 동시에 아우디 F1 디자인 쇼카를 공개했다. EA 스포츠와 코드마스터즈는 완벽히 디지털로 구현된 아우</p>
+                        <p>디의 쇼카를 ‘F1® 22’ 비디오 게임 최신 업데이트 버전에 포함시켰다.</p>
+                        <br>
+                        <p>아우디 브랜드 총괄 헨릭 벤더스(Henrik Wenders)는 “아우디의 첫 F1 경기보다 3년 앞서 포뮬러 1의 공식 시뮬레이션에 참여하는 일은 굉장히 의미 있는 일” 이라며 “아우디의 쇼카는 강렬한 디자인과 아</p>
+                        <p>우디 모터스포츠의 DNA를 잘 보여주는 외관으로 처음부터 상당한 관심을 불러일으켰고, 쇼카를 선보인 모든 곳에서 폭발적인 반응을 얻었다. 아우디의 F1 쇼카가 게임을 통해 가상 세계에서도 많은 팬들을</p>
+                        <p>확보할 것이라고 생각한다.” 라고 말했다.</p>
+                </div>
+            </div>
+            </div>
+        </section>
+    </div>
+
+            <!-- 섹션3 -->
+
+            <section class="section-4">
+                <div class="video-box">
+                    <video  src="../image/mp4/5730140_content_1920x1080.mp4" autoplay muted loop></video>
+                </div>
+                <div class="video-text">
+                    <h2 style="font-size: 3rem; font-weight:bold; color:rgba(255,255,255,0.3);">Audi Driving Experience</h2>
+                </div>
+            </section>
+
+
+            <!-- 섹션4  -->
+
+            <section class="sce-3">
+                <div class="event-container">
+                    <img src="../image/event_main.jpeg" alt="" />
+                    <div class="event_left">
+                        <h2>진행중 / 예정 이벤트</h2>
+                        <p>
+                            현재 진행 중인 이벤트 입니다.
+                        </p>
+                        <br>
+                        <a href="event.html" target="_blank">VIEW DETAIL</a>
+                    </div>
+                    <div class="event_right">
+                        <h2>종료 이벤트</h2>
+                        <p>
+                            완료된 이벤트 입니다.
+                        </p>
+                        <br>
+                        <a href="event.html" target="_blank">VIEW DETAIL</a>
+                    </div>
+                    <div class="event-text" data-aos="fade-right" data-aos-duration="1000">
+                        <h2>Audi Events</h2>
+                        <p>아우디에서 진행중인 다양한 이벤트를 소개합니다.</p>
+                    </div>
+                    <div class="btn-container" data-aos="fade-right" data-aos-duration="1000">
+                        <button class="btns" onclick="toggleBoxes()">VIEW DETAIL</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 푸터 -->
+            <footer>
+                <ul class="footer_list">
+                  <li><a href="#">개인정보처리방침</a></li>
+                  <li><a href="#">쿠키 정책</a></li>
+                  <li><a href="#">위치정보사업 이용약관</a></li>
+                  <li><a href="#">위치기반서비스 이용약관</a></li>
+                  <li><a href="#">아우디 그룹 부정비리 제보</a></li>
+                </ul>
+                <div id="footer_icons">
+                    <i class="fab fa-instagram" style="color:hotpink; font-size:24px; vertical-align: middle; margin-right:20px;" id="insta"></i>
+                    <i class="fab fa-youtube-square" style="color:red; font-size:24px; vertical-align: middle;" id="youtube"></i>
+                </div>
+                <hr>
+                <div class="copy"><a href="#">&copy;2024 Audi Korea Ltd</a></div>
+          
+              </footer>
+              <!-- 푸터 끝 -->
+
+
+            <a href="chatbot.html" class="scrollup" id="scroll-up" onclick="openPopup(event)"></a>
+            <a id="back-to-top" href="#"> </a>
+        </div>
+
+        <script src="https://kit.fontawesome.com/51a1670f78.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="../js/event.js"></script>
+        <script src="../jquery-3.7.1.min.js"></script>
+        <script src="../js/swiper.js"></script>
+        <script src="../js/banner.js"></script>
+        <script src="../js/gt.js"></script>
+        <script src="../js/scroll.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="../js/news.js"></script>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script>
+                function openPopup(event) {
+                // 기본 이벤트 동작 막기
+                event.preventDefault();
+                let url = event.target.getAttribute('href');
+        
+                let width = 413;
+                let height = 800;
+
+                let rightPosition = (screen.width - width) / 1.1;
+                let topPosition = (screen.height - height) / 2;
+                window.open(
+                    url,
+                    'Popup',
+                    'width=' + width + ', height=' + height + ', left=' + rightPosition + ', top=' + topPosition
+                );
+            }
+            AOS.init();
+        </script>
+
+        <script>
+            // 메뉴수정
+            $(document).ready(function () {
+                $('#menu_icon').change(function () {
+                    if ($(this).is(':checked')) {
+                        $('#menu').css('left', '0');
+                        $('#menuIconOpen').hide(); // 햄버거 아이콘 숨기기
+                        $('#menuIconClose').show(); // X 아이콘 표시
+                    } else {
+                        $('#menu').css('left', '-350px');
+                        $('#menuIconOpen').show(); // 햄버거 아이콘 표시
+                        $('#menuIconClose').hide(); // X 아이콘 숨기기
+                    }
+                });
+
+                // 닫기 버튼을 클릭하여 메뉴 닫기
+                $(document).on('click', '.closebtn', function () {
+                    $('#menu)icon').prop('checked', false);
+                    $('#menu').css('left', '-350px');
+                    $('.close_btn').remove(); // 닫기 버튼 제거
+                    $('#menuIconOpen').show(); // 햄버거 아이콘 표시
+                    $('#menuIconClose').hide(); // X 아이콘 숨기기
+                });
+
+                $('.menu_box > li > a').click(function (e) {
+                    e.preventDefault();
+                    let clickedMenuItem = $(this).parent();
+
+    
+                    if (clickedMenuItem.hasClass('active')) {
+                        clickedMenuItem.removeClass('active');
+                        clickedMenuItem.find('.sub-menu').hide();
+                        $('.menu_box li a').removeClass('hide'); 
+                        return; 
+                    }
+
+    
+                    $('.sub-menu').hide();
+
+            
+                    $('.menu_box li').removeClass('active');
+
+        
+                    clickedMenuItem.addClass('active');
+
+            
+                    clickedMenuItem.find('.sub-menu').show();
+
+                    $('.menu_box li').not(clickedMenuItem).find('.sub-menu').hide();
+
+                
+                    $('.menu_box li a').not($(this)).addClass('hide');
+                });
+            });
+        </script>
+    </body>
+</html>

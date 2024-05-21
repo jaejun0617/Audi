@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company</title>
+    <!-- 제이쿼리  -->
+    <script src="../jquery-3.7.1.min.js"></script>
+    <!-- 메인 css  -->
+    <link rel="stylesheet" href="../css/main.css" />
+    <!-- 로그인 css -->
+    <link rel="stylesheet" href="../css/login.css">
+    <!-- 스와이퍼 css js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- 아이콘 js  -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- 구글 아이콘 css -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="../js/company.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    body {
+        background: #141414;
+        font-family: 'GenesisSans Text KR OTF';
+    }
+
+    #company_first {
+        width:100%;
+        height: calc(100vh - 100px);
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    #company_first img {
+        width: 100%;
+        height: 100%;
+        /* 이미지가 화면에 꽉 차도록 설정 */
+        object-fit: cover;
+        opacity: 0.8;
+    }
+
+    .first_sub {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        /* 이미지와 내용이 화면에 꽉 차도록 설정 */
+    }
+
+    .first_context {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%) translateX(50px);
+        width: 700px;
+        color: #eee;
+        opacity: 0;
+        transition: opacity 5s ease, transform 5s;
+    }
+
+    .first_context h1 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .first_context.show {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateY(0);
+    }
+
+    /* 여기까지 첫번째 페이지 */
+
+    #company_second {
+        height: 110vh;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #company_second img {
+        width: 100%;
+        height: 98vh;
+        /* 이미지가 화면에 꽉 차도록 설정 */
+        object-fit: cover;
+        opacity: 0.8;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        /* 부드러운 전환을 위한 트랜지션 */
+    }
+
+    .second_context {
+        position: absolute;
+        top: 30%;
+        /* 조정 가능 */
+        left: 50%;
+        transform: translateY(50px);
+        width: 700px;
+        color: #eee;
+        opacity: 0;
+        /* 초기 위치 설정 */
+        transition: opacity 3s ease, transform 3s ease;
+        /* 트랜지션 추가 */
+    }
+
+    .second_context h1 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    /* 세번째 동영상 페이지 */
+    #company_third video {
+        height: 98vh;
+        width: 100%;
+    }
+
+    #company_forth {
+        width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+    }
+
+    #company_forth img {
+        width: 50%;
+        height: 600px;
+        position: relative;
+        top: 25%;
+        left: 10%;
+    }
+
+    .forth_context {
+        width: 600px;
+        position: relative;
+        top: -20%;
+        left: 62%;
+        color: #eee;
+        
+    }
+
+    .forth_context h1 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    #forth_btn {
+        display: block;
+        padding: 10px 25px;
+        background: #222;
+        border: 1px solid #eee;
+    }
+
+    #forth_btn a {
+        color: #eee;
+    }
+
+</style>
+
+
+<body>
+    <div id="container">
+        <!-- 헤더 메뉴 -->
+        <header>
+            <div class="icon_left">
+                <input type="checkbox" name="menu_icon" id="menu_icon" />
+                <label for="menu_icon">
+                    <span id="menuIconOpen" class="material-symbols-outlined"
+                        style="font-size: 35px; font-weight: 600">menu</span>
+                    <span id="menuIconClose" class="material-symbols-outlined"
+                        style="font-size: 35px; font-weight: 600; display: none">&times;</span>
+                </label>
+            </div>
+
+            <div class="logo">
+                <a href="main.html" target="_blank">
+                    <img src="../image/Crop_Audi_logo.png" alt="AudiLogo" width="100" />
+                </a>
+            </div>
+
+            <div class="icon_right">
+                <div class="searchicon">
+                    <span class="material-symbols-outlined" style="font-size:32px; font-weight:600">search</span>
+                    <input type="text" name="" id="" placeholder="Search">
+                </div>
+
+                <div class="lock">
+                    <div class="lockicon">
+                        <span class="material-symbols-outlined" style="font-size:32px; font-weight:600;">lock</span>
+                    </div>
+                    <div class="login">
+                        <input type="text" name="id" id="id" placeholder="아이디">
+                        <input type="password" name="pw" id="pw" placeholder="비밀번호">
+                    </div>
+                    <div class="loginbtn">
+                        <button><a href="login_form.html" target="_blank">sign up</a></button>
+                        <button><a href="login_form.html" target="_blank">log in</a></button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav id="menu">
+            <ul class="icon_box">
+                <li>
+                    <a href="#"><span class="material-symbols-outlined"
+                            style="font-size: 30px; font-weight: 600">person</span></a>
+                </li>
+                <li>
+                    <a href="#"><span class="material-symbols-outlined"
+                            style="font-size: 30px; font-weight: 600">event</span></a>
+                </li>
+                <li>
+                    <a href="#"><span class="material-symbols-outlined"
+                            style="font-size: 30px; font-weight: 600">favorite</span></a>
+                </li>
+                <li>
+                    <a href="#"><span class="material-symbols-outlined"
+                            style="font-size: 30px; font-weight: 600">shopping_cart</span></a>
+                </li>
+            </ul>
+            <ul class="menu_box">
+                <li class="nav__item">
+                    <a href="company.html" class="nav__item">About</a>
+                    <ul class="sub-menu">
+                        <li><a href="company.html">COMPANY</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Models</a>
+                    <ul class="sub-menu">
+                        <li><a href="models_0401.html">LINE-UP</a></li>
+                        <li><a href="models_sedan.html">SEDAN</a></li>
+                        <li><a href="#">SUV</a></li>
+                        <li><a href="#">SPORTBACK</a></li>
+                        <li><a href="#">E-TRON</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a href="center.html" class="nav__link">Center</a>
+                    <ul class="sub-menu">
+                        <li><a href="center.html">CENTERS</a></li>
+                    </ul>
+                </li class="nav__item">
+                <li>
+                    <a href="#" class="nav__link">Experience</a>
+                    <ul class="sub-menu">
+                        <li><a href="experience.html">Experience</a></li>
+                    </ul>
+                </li class="nav__item">
+                <li>
+                    <a href="#" class="nav__link">Exclusive</a>
+                    <ul class="sub-menu">
+                        <li><a href="exclusive.html">Exclusive</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- 헤더 메뉴 끝 -->
+
+        <!-- 첫번째 페이지 -->
+        <div id="company_first">
+            <img src="../image/first.jpg">
+            <div class="first_sub">
+                <div class="first_context">
+                    <h1>About Audi Korea</h1>
+                    <h3>독일 AUDI AG의 한국내 판매법인으로 설립된 Audi Korea를 소개해 드립니다.</h6>
+                        <p>독일의 프리미엄 자동차 브랜드 아우디 AG가 100% 투자한 한국 판매 법인인 아우디 코리아(대표: 임현기)는 2004년 10월 5일 공식 영업을 시작하였습니다.
+                        </p>
+                        <p>아우디 코리아는 “기술을 통한 진보”라는 아우디의 기업 슬로건 아래, 최상급 제품과 딜러 네트워크의 확장, 고객 만족을 충족하여 한국 시장 내 아우디 브랜드의 가치
+                            창출에
+                        </p>
+                        <p>노력하고 있으며, 또한 첨단 기술과 진보적 디자인의 조화를 통한 최고의 제품만을 고객에게 제공할 것입니다.</p>
+                        <p>점점 다양해지는 고객들의 요구를 충족하고자 아우디 코리아는 신모델 출시를 통한 더욱 세분화된 모델 라인업을 확보할 예정입니다 </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 두번째 페이지 -->
+        <div id="company_second">
+            <img src="../image/second.jpg">
+            <div class="second_context">
+                <h1>ATHELETIC ELEGANCE</h1>
+                <p>대담하고, 진보적이면서 가장 한국적, 이 세가지 키워드가 아우디 디자인을 정의합니다.</p>
+                <p>마치 고급 식당의 쉐프처럼 역동성과 우아함을 재료로, 각 모델에 알맞는 기품있는 디자인을 선보입니다.</p>
+            </div>
+        </div>
+
+        <!-- 3번째 오토비디오 -->
+        <div id="company_third">
+            <video src="../image/audi.mp4" autoplay muted loop></video>
+        </div>
+    </div>
+
+    <!-- 4번째 페이지 -->
+    <div id="company_forth">
+        <img src="../image/forth.jpg" id="forth_img">
+        <div class="forth_context">
+            <h1>스페이스</h2>
+                <p>아우디만의 철학을 경험할 수 있는 전용 공간을
+                방문해보세요. <br><br> 차량 전시 및 시승과 다양한 경험
+                프로그램들을 제공합니다.</p>
+                <br>
+                <button id="forth_btn"><a href="#">View more</a></button>
+        </div>
+
+    </div>
+
+    <!-- 푸터 -->
+    <footer>
+        <ul class="footer_list">
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">쿠키 정책</a></li>
+          <li><a href="#">위치정보사업 이용약관</a></li>
+          <li><a href="#">위치기반서비스 이용약관</a></li>
+          <li><a href="#">아우디 그룹 부정비리 제보</a></li>
+        </ul>
+        
+            <div id="footer_icons">
+                <i class="fab fa-instagram" style="color:hotpink; font-size:24px; vertical-align: middle; margin-right:20px;" id="insta"></i>
+                <i class="fab fa-youtube-square" style="color:red; font-size:24px; vertical-align: middle;" id="youtube"></i>
+            </div>
+       
+        <hr>
+        <div class="copy"><a href="#">&copy;2024 Audi Korea Ltd</a></div>
+  
+      </footer>
+      <!-- 푸터 끝 -->
+
+
+    <a href="./chatbot.html" class="scrollup" id="scroll-up" onclick="openPopup(event)"></a>
+    <a id="back-to-top"> </a>
+    </div>
+
+    <script src="https://kit.fontawesome.com/51a1670f78.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/event.js"></script>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="../js/banner.js"></script>
+    <script src="../js/gt.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/news.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        function openPopup(event) {
+            // 기본 이벤트 동작 막기
+            event.preventDefault();
+            let url = event.target.getAttribute('href');
+
+            let width = 413;
+            let height = 800;
+
+            let rightPosition = (screen.width - width) / 1.1;
+            let topPosition = (screen.height - height) / 2;
+            window.open(
+                url,
+                'Popup',
+                'width=' + width + ', height=' + height + ', left=' + rightPosition + ', top=' + topPosition
+            );
+        }
+        AOS.init();
+    </script>
+
+    <script>
+        // 메뉴수정
+        $(document).ready(function () {
+            $('#menu_icon').change(function () {
+                if ($(this).is(':checked')) {
+                    $('#menu').css('left', '0');
+                    $('#menuIconOpen').hide(); // 햄버거 아이콘 숨기기
+                    $('#menuIconClose').show(); // X 아이콘 표시
+                } else {
+                    $('#menu').css('left', '-350px');
+                    $('#menuIconOpen').show(); // 햄버거 아이콘 표시
+                    $('#menuIconClose').hide(); // X 아이콘 숨기기
+                }
+            });
+
+            // 닫기 버튼을 클릭하여 메뉴 닫기
+            $(document).on('click', '.closebtn', function () {
+                $('#menu)icon').prop('checked', false);
+                $('#menu').css('left', '-350px');
+                $('.close_btn').remove(); // 닫기 버튼 제거
+                $('#menuIconOpen').show(); // 햄버거 아이콘 표시
+                $('#menuIconClose').hide(); // X 아이콘 숨기기
+            });
+
+            $('.menu_box > li > a').click(function (e) {
+                e.preventDefault();
+                let clickedMenuItem = $(this).parent();
+
+
+                if (clickedMenuItem.hasClass('active')) {
+                    clickedMenuItem.removeClass('active');
+                    clickedMenuItem.find('.sub-menu').hide();
+                    $('.menu_box li a').removeClass('hide');
+                    return;
+                }
+
+
+                $('.sub-menu').hide();
+
+
+                $('.menu_box li').removeClass('active');
+
+
+                clickedMenuItem.addClass('active');
+
+
+                clickedMenuItem.find('.sub-menu').show();
+
+                $('.menu_box li').not(clickedMenuItem).find('.sub-menu').hide();
+
+
+                $('.menu_box li a').not($(this)).addClass('hide');
+            });
+        });
+    </script>
+</body>
+
+</html>
